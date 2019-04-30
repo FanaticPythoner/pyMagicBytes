@@ -15,7 +15,7 @@ I wrote this tool for Hacking Competition purpose. However, you can use it for w
 ### Table of Contents: ###
 
 - Classes
-  - [*FileObject*](https://github.com/FanaticPythoner/MSOfficeFileConverter#fileobject-class)
+  - [*FileObject*](https://github.com/FanaticPythoner/pyMagicBytes#fileobject-class)
   
 # Installation
 
