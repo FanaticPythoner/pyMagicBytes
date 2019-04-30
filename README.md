@@ -1,5 +1,5 @@
 # pyMagicBytes (0 EXTERNAL DEPENDENCY) 
-This tool is basically a Database of 750+ Magic Bytes (Files Signatures) with a 3 lines python wraper to find the type of any file you trow at it.
+This tool is basically a Database of 750+ Magic Bytes (Files Signatures) with a 4 lines python wraper to find the type of any file you trow at it.
 
 I wrote this tool for Hacking Competition purpose. However, you can use it for whatever you want. Feel free to tell me if any Magic Bytes in the "database" is wrong.
 
@@ -33,6 +33,7 @@ Open a file stream of a given file you provided the Path in the constructor. It 
 *This example create a FileObject object then find the file type of the file which the path was specified in the constructor. The file types are sorted by the most probable file type to the less probable.*
 ```python
 from DBFileTypes import _getAllFileTypes
+from GetFileType import FileObject
 obj = FileObject(r"SampleFile\file_example_AVI_480_750kB.avi")
 ListOfPossibleFileTypes = obj.getPossibleTypes()
 ```
