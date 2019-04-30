@@ -9,7 +9,7 @@ I wrote this tool for Hacking Competition purpose. However, you can use it for w
 
 ### Limitations: ###
 
-- Because a lot of files have the same Magic Bytes it is impossible (in most cases) to be 100% sure that the file your throwed at pyMagicBytes can be only one file type : This is why, when you call the *GetPossibleTypes()* function of a [*FileObject*](https://github.com/FanaticPythoner/pyMagicBytes#fileobject-class) it will return an array containing all possible files types (with some additionnal informations). See below for more details.
+- Because a lot of files have the same Magic Bytes it is impossible (in most cases) to be 100% sure that the file you throwed at pyMagicBytes can be only one file type : This is why, when you call the *GetPossibleTypes()* function of a [*FileObject*](https://github.com/FanaticPythoner/pyMagicBytes#fileobject-class) it will return an array containing all possible files types (with some additionnal informations). See below for more details.
 
 
 ### Table of Contents: ###
