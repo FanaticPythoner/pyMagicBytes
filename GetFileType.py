@@ -1,3 +1,6 @@
+# Autor : FanaticPythoner.
+# Please read the "LICENSE" file before doing anything.
+
 from DBFileTypes import _getAllFileTypes
 import os
 
