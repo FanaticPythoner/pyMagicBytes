@@ -1,7 +1,7 @@
 # pyMagicBytes
 This tool is basically a Database of 780+ Magic Bytes (Files Signatures) with a 4 lines python wraper to find the type of any file you trow at it.
 
-I wrote this tool for Hacking Competition purpose. However, you can use it for whatever you want. Feel free to tell me if any Magic Bytes in the "database" is wrong.
+I wrote this tool for Hacking Competition purpose. However, you can use it for whatever you want. Feel free to tell me if any Magic Bytes in the "database" is wrong. You can update the dabase you have locally on your machine with a simple argument. Details below.
 
 ### Language: ### 
 
@@ -20,6 +20,8 @@ I wrote this tool for Hacking Competition purpose. However, you can use it for w
 # Installation
 
 - Download the repository
+
+- Install the requirement of the requests library (if you don't already have it) by calling the "pip install -r requirements.txt" command.
 
 - Use the sample code below [*Usage / Code Sample*](https://github.com/FanaticPythoner/pyMagicBytes#usage--code-sample-) in the [*FileObject*](https://github.com/FanaticPythoner/pyMagicBytes#fileobject-class) class below as an example. Enjoy.
 
