@@ -35,6 +35,7 @@ Open a file stream of a given file you provided the Path in the constructor. It 
 *This example create a FileObject object then find the file type of the file which the path was specified in the constructor. The file types are sorted by the most probable file type to the less probable.*
 ```python
 from pyMagicBytes import FileObject
+
 obj = FileObject(r"SampleFile\file_example_AVI_480_750kB.avi")
 ListOfPossibleFileTypes = obj.getPossibleTypes()
 ```
@@ -45,8 +46,10 @@ This is the value of the variable *ListOfPossibleFileTypes* of the previous exam
 If you decided to set the optional argument 'ReturnArray' of the method 'getPossibleTypes()' to the value 'False', pyMagicBytes will return you a nice little printable string. Here is an example :
 ```python
 from pyMagicBytes import FileObject
+
 obj = FileObject(r"SampleFile\file_example_AVI_480_750kB.avi")
 ListOfPossibleFileTypes = obj.getPossibleTypes(ReturnArray=False)
+
 print(ListOfPossibleFileTypes)
 ```
 The output of the previous example:
@@ -57,6 +60,7 @@ If you decided to specify that the argument 'updateDB' in the [*FileObject*](htt
 
 ```python
 from pyMagicBytes import FileObject
+
 obj = FileObject(r"SampleFile\file_example_AVI_480_750kB.avi", updateDB=True)
 ```
 
