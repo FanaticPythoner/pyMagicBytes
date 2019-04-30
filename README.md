@@ -42,6 +42,17 @@ This is the value of the variable *ListOfPossibleFileTypes* of the previous exam
 
 ![alt text](https://i.imgur.com/Y1qB1RK.jpg)
 
+If you decided to set the optional argument 'ReturnArray' of the method 'getPossibleTypes()' to the value 'False', pyMagicBytes will return you a nice little printable string. Here is an example :
+```python
+from pyMagicBytes import FileObject
+obj = FileObject(r"SampleFile\file_example_AVI_480_750kB.avi")
+ListOfPossibleFileTypes = obj.getPossibleTypes(ReturnArray=False)
+print(ListOfPossibleFileTypes)
+```
+The output of the previous example:
+
+![alt text](https://i.imgur.com/XLryca1.jpg)
+
 If you decided to specify that the argument 'updateDB' in the [*FileObject*](https://github.com/FanaticPythoner/pyMagicBytes#fileobject-class) constructor is equal to 'True', then pyMagicBytes will update the DB you have locally with the most recent DB version on Github automatically. Here is an example:
 
 ```python
