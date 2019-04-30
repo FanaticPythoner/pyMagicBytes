@@ -36,6 +36,6 @@ from DBFileTypes import _getAllFileTypes
 obj = FileObject(r"SampleFile\file_example_AVI_480_750kB.avi")
 ListOfPossibleFileTypes = obj.getPossibleTypes()
 ```
-This is the output of the example when debugging with Visual Studio Code:
+This is the value of the variable *ListOfPossibleFileTypes* of the previous example when debugging with Visual Studio Code:
 
 ![alt text](https://i.imgur.com/Y1qB1RK.jpg)
