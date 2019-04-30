@@ -14,7 +14,7 @@ def _updateDBFromGithub():
             f.write(newDB)
     except Exception as e:
         return str(e.args)
-    print('Updated DB successfully.')
+    print('[LOG INFO] : Updated DB successfully.')
     return 'Success'
 
 class FileObject:
@@ -26,7 +26,7 @@ class FileObject:
         self.allFileTypes = _getAllFileTypes()
         self.fileStream = open(abspath(filePath),'rb')
 
-    def getPossibleTypes(self):
+    def getPossibleTypes(self, ReturnArray=True):
         typesFound = []
         for row in self.allFileTypes:
             matchedCurrentFileType = True
@@ -42,5 +42,18 @@ class FileObject:
                             matchedCurrentFileType = False
                             break
             if matchedCurrentFileType:
-                typesFound.append([('Bytes Offsets', offs.replace('..',' and ')), ('File Signature', sign), ('File Extension', ext), ('Description', desc)])
-        return typesFound
+                typesFound.append([('Bytes Offsets', offs.replace('..',' and ')), ('File Signature', sign), ('File Extension', ext), ('Description', desc.replace('\n',''))])
+        if ReturnArray:
+            return typesFound
+        else:
+            newTypeFound = [''] * len(typesFound)
+            for item in typesFound:
+                tempItemFromTuples = ''
+                for tuples in item:
+                    if tempItemFromTuples != '':
+                        tempItemFromTuples = tempItemFromTuples + ' -> ' + tuples[0] + ' : ' + str(tuples[1])
+                    else:
+                        tempItemFromTuples = tuples[0] + ' : ' + str(tuples[1])
+                newTypeFound.append(tempItemFromTuples)
+            newTypeFound = [x for x in newTypeFound if x != '']
+            return str(newTypeFound).replace("', '", ",\n").replace("['Bytes Offsets :","Bytes Offsets :").replace("']","")
