@@ -43,7 +43,9 @@ This is the value of the variable *ListOfPossibleFileTypes* of the previous exam
 
 ![alt text](https://i.imgur.com/Y1qB1RK.jpg)
 
-If you decided to set the optional argument 'ReturnArray' of the method 'getPossibleTypes()' to the value 'False', pyMagicBytes will return you a nice little printable string. Here is an example :
+If you decided to set the optional argument 'ReturnArray' of the method 'getPossibleTypes()' to the value 'False', pyMagicBytes will return you a nice little printable string. 
+#### IMPORTANT NOTE: The '??' Hexadecimal byte representation mean it can be literally any byte. ####
+Here is an example :
 ```python
 from pyMagicBytes import FileObject
 
