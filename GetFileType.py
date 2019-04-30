@@ -1,13 +1,30 @@
 # Autor : FanaticPythoner.
 # Please read the "LICENSE" file before doing anything.
 
-from DBFileTypes import _getAllFileTypes
-import os
+from os.path import abspath
+from requests import get
+
+def _getAllFileTypes():
+    return open('DB','r').readlines()
+
+def _updateDBFromGithub():
+    try:
+        newDB = get('https://raw.githubusercontent.com/FanaticPythoner/pyMagicBytes/master/DB').text
+        with open('DB','w') as f:
+            f.write(newDB)
+    except Exception as e:
+        return str(e.args)
+    print('Updated DB successfully.')
+    return 'Success'
 
 class FileObject:
-    def __init__(self, filePath):
+    def __init__(self, filePath, updateDB=False):
+        if updateDB:
+            output = _updateDBFromGithub()
+            if output != 'Success':
+                raise Exception('An error occured when trying to update the DB from Github: ' + output)
         self.allFileTypes = _getAllFileTypes()
-        self.fileStream = open(os.path.abspath(filePath),'rb')
+        self.fileStream = open(abspath(filePath),'rb')
 
     def getPossibleTypes(self):
         typesFound = []
