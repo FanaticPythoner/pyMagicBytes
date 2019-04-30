@@ -1,5 +1,5 @@
 # pyMagicBytes
-This tool is basically a Database of 780+ Magic Bytes (Files Signatures) with a 4 lines python wraper to find the type of any file you trow at it.
+This tool is basically a Database of 780+ Magic Bytes (Files Signatures) with a 3 lines python wraper to find the type of any file you trow at it.
 
 I wrote this tool for Hacking Competition purpose. However, you can use it for whatever you want. Feel free to tell me if any Magic Bytes in the "database" is wrong. You can update the dabase you have locally on your machine with a simple argument. Details below.
 
@@ -34,11 +34,21 @@ Open a file stream of a given file you provided the Path in the constructor. It 
 ### Usage / Code sample : ###
 *This example create a FileObject object then find the file type of the file which the path was specified in the constructor. The file types are sorted by the most probable file type to the less probable.*
 ```python
-from DBFileTypes import _getAllFileTypes
-from GetFileType import FileObject
+from pyMagicBytes import FileObject
 obj = FileObject(r"SampleFile\file_example_AVI_480_750kB.avi")
 ListOfPossibleFileTypes = obj.getPossibleTypes()
 ```
 This is the value of the variable *ListOfPossibleFileTypes* of the previous example when debugging with Visual Studio Code:
 
 ![alt text](https://i.imgur.com/Y1qB1RK.jpg)
+
+If you decided to specify that the argument 'updateDB' in the [*FileObject*](https://github.com/FanaticPythoner/pyMagicBytes#fileobject-class) constructor is equal to 'True', then pyMagicBytes will update the DB you have locally with the most recent DB version on Github automatically. Here is an example:
+
+```python
+from pyMagicBytes import FileObject
+obj = FileObject(r"SampleFile\file_example_AVI_480_750kB.avi", updateDB=True)
+```
+
+If you do so, you will see a nice little log telling you if  everything worked as its suppose to:
+
+![alt text](https://i.imgur.com/eAca4i5.jpg)
