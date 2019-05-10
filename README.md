@@ -1,5 +1,5 @@
 # pyMagicBytes
-This tool is basically a Database of 780+ Magic Bytes (Files Signatures) with a 3 lines python wraper to find the type of any file you trow at it.
+This tool is basically a Database of 780+ Magic Bytes (Files Signatures) with a 3 lines python wraper to find the type of any file you throw at it.
 
 I wrote this tool for Hacking Competition purpose. However, you can use it for whatever you want. Feel free to tell me if any Magic Bytes in the "database" is wrong. You can update the dabase you have locally on your machine with a simple argument. Details below.
 
